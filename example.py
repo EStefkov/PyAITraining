@@ -92,7 +92,7 @@ def plot_confusion_matrix(cm,
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
 
-  cm_plot_labels = ['без-странични ефекти','със странични-ефекти']
+cm_plot_labels = ['без-странични ефекти','със странични-ефекти']
 
 plot_confusion_matrix(cm=cm, classes= cm_plot_labels, title ='Confusion Matrix')
 
