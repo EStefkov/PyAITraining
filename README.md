@@ -10,7 +10,4 @@
 
 3. **Add Code**
 
-   Click on the "+" button and select "Code", then paste the data generation code into a cell. For example:
-
-   ```python
-   # Paste the data generation code here
+   Click on the "+" button and select "Code", then paste the data generation code into a cell.
