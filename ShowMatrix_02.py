@@ -1,13 +1,3 @@
-#https://colab.research.google.com/
-
-import numpy as np
-from random import randint
-from sklearn.utils import shuffle
-from sklearn.preprocessing import MinMaxScaler
-%matplotlib inline
-from sklearn.metrics import confusion_matrix
-import itertools
-import matplotlib.pyplot as plt
 
 train_samples =[]
 train_labels = []
@@ -16,7 +6,7 @@ for i in range(50):
   random_younger = randint(13,64)
   train_samples.append(random_younger)
   train_labels.append(1)
-    
+
   random_older = randint(65,100)
   train_samples.append(random_older)
   train_labels.append(0)
@@ -52,12 +42,6 @@ predictions = model.predict(
     verbose=0
 )
 
-'''for i in predictions:
-  print(i)
-
-
- 
-'''
 rounded_predictions= np.argmax(predictions, axis=-1)
 
 cm = confusion_matrix( y_true = train_labels , y_pred=rounded_predictions)
@@ -95,5 +79,3 @@ def plot_confusion_matrix(cm,
 cm_plot_labels = ['без-странични ефекти','със странични-ефекти']
 
 plot_confusion_matrix(cm=cm, classes= cm_plot_labels, title ='Confusion Matrix')
-
-                        
